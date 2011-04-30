@@ -48,6 +48,13 @@ int heap_init(heap_t *heap, int type, heap_priority_f priority) {
     return 1;
 }
 
+void heap_delete(heap_t *heap) {
+    if (heap) {
+        if (heap->heap) free(heap->heap);
+        free(heap);
+    }
+}
+
 int heap_size(heap_t *heap) {
     return heap->c_items;
 }

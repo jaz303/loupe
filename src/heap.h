@@ -34,6 +34,7 @@ int max_heap_init(heap_t *heap, heap_priority_f priority);
 
 heap_t *heap_new(int type, heap_priority_f priority);
 int heap_init(heap_t *heap, int type, heap_priority_f priority);
+void heap_delete(heap_t *heap);
 
 int heap_size(heap_t *heap);
 int heap_insert(heap_t *heap, void *item);
